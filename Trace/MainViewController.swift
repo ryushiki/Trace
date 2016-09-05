@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             self.tableView.delegate = self
@@ -47,6 +47,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let nib = UINib.init(nibName: Constants.TableViewCellID.CustomTableViewCell, bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: Constants.TableViewCellID.CustomTableViewCell)
         configureDatabase()
     }
     
@@ -59,8 +63,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    
-        let cell: UITableViewCell! = self.tableView .dequeueReusableCellWithIdentifier("tableViewCell", forIndexPath: indexPath)
+        
+        let cell = self.tableView.dequeueReusableCellWithIdentifier(Constants.TableViewCellID.CustomTableViewCell, forIndexPath: indexPath) as! CustomTableViewCell
+        
+        let messageSnapshot: FIRDataSnapshot! = self.messages[indexPath.row]
+        let message = messageSnapshot.value as! Dictionary<String, String>
+        let text = message[Constants.MessageFields.text] as String!
+        cell.nameLabel.text = text
+        
+        
         return cell
     }
 }

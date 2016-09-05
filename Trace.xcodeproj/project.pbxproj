@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7A87110C45741C127D753E00 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8E1793AB3FB1082407F9C5 /* libPods.a */; };
+		DF6715731D7D9C830096B287 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6715721D7D9C830096B287 /* CustomTableViewCell.swift */; };
+		DF6715781D7D9D0A0096B287 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF6715771D7D9D0A0096B287 /* CustomTableViewCell.xib */; };
 		DF6A8ACA1D7C593A002597C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A8AC91D7C593A002597C4 /* AppDelegate.swift */; };
 		DF6A8ACF1D7C593A002597C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF6A8ACD1D7C593A002597C4 /* Main.storyboard */; };
 		DF6A8AD11D7C593A002597C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6A8AD01D7C593A002597C4 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 		1D8E1793AB3FB1082407F9C5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A32756F7085C573F916F67A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8C45EF5495F8B39300F24A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DF6715721D7D9C830096B287 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		DF6715771D7D9D0A0096B287 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		DF6A8AC61D7C593A002597C4 /* Trace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6A8AC91D7C593A002597C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF6A8ACE1D7C593A002597C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +67,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF6715741D7D9C900096B287 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF6A8AD21D7C593A002597C4 /* LaunchScreen.storyboard */,
+				DF6A8ACD1D7C593A002597C4 /* Main.storyboard */,
+				DF6715721D7D9C830096B287 /* CustomTableViewCell.swift */,
+				DF6715771D7D9D0A0096B287 /* CustomTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		DF6A8ABD1D7C593A002597C4 = {
 			isa = PBXGroup;
 			children = (
@@ -84,11 +99,10 @@
 		DF6A8AC81D7C593A002597C4 /* Trace */ = {
 			isa = PBXGroup;
 			children = (
+				DF6715741D7D9C900096B287 /* View */,
 				DF6A8ADF1D7C65BC002597C4 /* ViewController */,
 				DF6A8AC91D7C593A002597C4 /* AppDelegate.swift */,
 				DF6A8AE01D7C660F002597C4 /* Constants.swift */,
-				DF6A8ACD1D7C593A002597C4 /* Main.storyboard */,
-				DF6A8AD21D7C593A002597C4 /* LaunchScreen.storyboard */,
 				DF6A8ADB1D7C6013002597C4 /* GoogleService-Info.plist */,
 				DF6A8AD51D7C593A002597C4 /* Info.plist */,
 				DF6A8AD01D7C593A002597C4 /* Assets.xcassets */,
@@ -170,6 +184,7 @@
 				DF6A8AD41D7C593A002597C4 /* LaunchScreen.storyboard in Resources */,
 				DF6A8ADC1D7C6013002597C4 /* GoogleService-Info.plist in Resources */,
 				DF6A8AD11D7C593A002597C4 /* Assets.xcassets in Resources */,
+				DF6715781D7D9D0A0096B287 /* CustomTableViewCell.xib in Resources */,
 				DF6A8ACF1D7C593A002597C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6A8ACA1D7C593A002597C4 /* AppDelegate.swift in Sources */,
+				DF6715731D7D9C830096B287 /* CustomTableViewCell.swift in Sources */,
 				DF6A8ADE1D7C62E8002597C4 /* LoginViewViewController.swift in Sources */,
 				DF6A8AE11D7C660F002597C4 /* Constants.swift in Sources */,
 				DF6A8AE31D7C67F6002597C4 /* MainViewController.swift in Sources */,
